@@ -16,8 +16,9 @@
   --fw-bold: 900;
 
   --clr-light: #fff;
-  --clr-dark: #303030;
+  --clr-dark: hsl(0, 0%, 19%);
   --clr-accent: hsl(24, 100%, 65%);
+  --clr-accent-alt: hsl(96, 57%, 60%);
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -25,7 +26,7 @@
   --fs-body: 1rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
-        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 
   --br-round: 4px;
 }
@@ -72,7 +73,7 @@ img {
 .btn {
   display: inline-block;
   padding: 0.5em 2em;
-  background: var(--clr-accent);
+  background: var(--clr-accent-alt);
   color: var(--clr-dark);
   font-weight: var(--fw-bold);
   text-decoration: none;
@@ -86,7 +87,7 @@ img {
 
 .btn:hover {
   transform: scale(1.1);
-  opacity: 0.9;
+  background: var(--clr-accent);
 }
 
 /* Typography */
@@ -127,6 +128,7 @@ h3 { font-size: var(--fs-h3) }
   padding: .25em .35em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+  border-radius: var(--br-round);
 }
 
 .section__subtitle--work {
@@ -254,7 +256,6 @@ header {
 .section__subtitle--intro {
   display: inline-block;
   text-transform: uppercase;
-  border-radius: var(--br-round);
 }
 
 @media (min-width: 600px) {
@@ -343,6 +344,7 @@ header {
 
 .about-me__img {
   box-shadow: var(--bs);
+  border-radius: var(--br-round);
 }
 
 @media (min-width: 600px) {
@@ -425,12 +427,13 @@ header {
 }
 
 .footer a {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
 }
 
 .footer__link {
   font-weight: var(--fw-bold);
+  color: var(--clr-accent-alt);
 }
 
 .footer__link:hover,
@@ -448,6 +451,10 @@ header {
   justify-content: center;
   margin: 2em 0 0;
   padding: 0;
+}
+
+.social-list a {
+  color: var(--clr-accent);
 }
 
 .social-list__item {
