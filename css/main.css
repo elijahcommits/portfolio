@@ -17,7 +17,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: hsl(24, 100%, 65%);
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -26,6 +26,8 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
         0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
+  --br-round: 4px;
 }
 
 @media (min-width: 800px) {
@@ -64,6 +66,7 @@ img {
 :focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
+  border-radius: var(--br-round);
 }
 
 .btn {
@@ -78,6 +81,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 200ms ease-in-out;
+  border-radius: var(--br-round);
 }
 
 .btn:hover {
@@ -244,10 +248,13 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
+  border-radius: var(--br-round);
 }
 
 .section__subtitle--intro {
   display: inline-block;
+  text-transform: uppercase;
+  border-radius: var(--br-round);
 }
 
 @media (min-width: 600px) {
@@ -274,6 +281,7 @@ header {
     grid-column: -1 / 1;
     grid-row: 2;
     text-align: right;
+    padding-right: 0.7em;
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em)
