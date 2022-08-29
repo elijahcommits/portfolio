@@ -13,11 +13,12 @@
   --ff-secondary: 'Source Code Pro', monospace;
 
   --fw-reg: 300;
+  --fw-med: 400;
   --fw-bold: 900;
 
   --clr-light: #fff;
   --clr-dark: hsl(0, 0%, 19%);
-  --clr-accent: hsl(24, 100%, 65%);
+  --clr-accent: hsl(24, 100%, 69%);
   --clr-accent-alt: hsl(96, 57%, 60%);
 
   --fs-h1: 3rem;
@@ -340,11 +341,16 @@ header {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
+  font-weight: var(--fw-med);
 }
 
 .about-me__img {
   box-shadow: var(--bs);
   border-radius: var(--br-round);
+}
+
+.about-me .section__subtitle {
+  font-weight: 500;
 }
 
 @media (min-width: 600px) {
